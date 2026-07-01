@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4417a5e048b63e43a030f31f01f1932, type: 3}
+  m_Name: Ball05
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalData
+  level: 4
+  speciesName: 
+  sprite: {fileID: -1065102686440974969, guid: 2f005de9d3dfab240b1df6bb9d965d9b, type: 3}
+  visualScale: 1.3
+  mass: 2
+  nextEvolution: {fileID: 11400000, guid: 1e5e67b680d414b4e8d00ff0cf0219c2, type: 2}
+  scoreValue: 200
+  mergeVFXPrefab: {fileID: 0}
+  mergeSound: {fileID: 8300000, guid: 3a7822d8a6b010342a25a5b5076bb145, type: 3}
+  shakeEnergyReward: 5

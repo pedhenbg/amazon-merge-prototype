@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4417a5e048b63e43a030f31f01f1932, type: 3}
+  m_Name: Ball09
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalData
+  level: 8
+  speciesName: Boto
+  sprite: {fileID: 8408595963807615683, guid: 2f005de9d3dfab240b1df6bb9d965d9b, type: 3}
+  visualScale: 2.5
+  mass: 3.5
+  nextEvolution: {fileID: 0}
+  scoreValue: 5000
+  mergeVFXPrefab: {fileID: 0}
+  mergeSound: {fileID: 8300000, guid: 3a7822d8a6b010342a25a5b5076bb145, type: 3}
+  shakeEnergyReward: 5
