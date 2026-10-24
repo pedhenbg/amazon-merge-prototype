@@ -21,4 +21,4 @@ MonoBehaviour:
   scoreValue: 5000
   mergeVFXPrefab: {fileID: 0}
   mergeSound: {fileID: 8300000, guid: 3a7822d8a6b010342a25a5b5076bb145, type: 3}
-  shakeEnergyReward: 5
+  shakeEnergyReward: 10

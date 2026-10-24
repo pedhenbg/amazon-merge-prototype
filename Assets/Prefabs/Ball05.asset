@@ -15,7 +15,7 @@ MonoBehaviour:
   level: 4
   speciesName: 
   sprite: {fileID: -1065102686440974969, guid: 2f005de9d3dfab240b1df6bb9d965d9b, type: 3}
-  visualScale: 1.3
+  visualScale: 1.4
   mass: 2
   nextEvolution: {fileID: 11400000, guid: 1e5e67b680d414b4e8d00ff0cf0219c2, type: 2}
   scoreValue: 200

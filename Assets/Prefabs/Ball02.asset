@@ -15,10 +15,10 @@ MonoBehaviour:
   level: 1
   speciesName: Arara Azul
   sprite: {fileID: 7221470181528313447, guid: 2f005de9d3dfab240b1df6bb9d965d9b, type: 3}
-  visualScale: 0.5
+  visualScale: 0.8
   mass: 0.8
   nextEvolution: {fileID: 11400000, guid: 0c77dc44bf9929741912b62c6c68681e, type: 2}
   scoreValue: 30
   mergeVFXPrefab: {fileID: 0}
   mergeSound: {fileID: 8300000, guid: 3a7822d8a6b010342a25a5b5076bb145, type: 3}
-  shakeEnergyReward: 5
+  shakeEnergyReward: 2
