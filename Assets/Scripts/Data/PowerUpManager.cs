@@ -44,7 +44,7 @@ public class PowerUpManager : MonoBehaviour
     {
         if (GameManager.Instance.CurrentState != GameState.PowerUpSelection) return;
 
-        if (Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             ProcessSelection();
         }
@@ -52,7 +52,7 @@ public class PowerUpManager : MonoBehaviour
 
     private void ProcessSelection()
     {
-        Vector2 screenPos = Pointer.current.position.ReadValue();
+        Vector2 screenPos = Mouse.current.position.ReadValue();
         Vector3 worldPos = _mainCam.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, _mainCam.nearClipPlane));
 
         RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);

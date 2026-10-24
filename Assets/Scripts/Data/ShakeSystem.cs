@@ -33,7 +33,6 @@ public class ShakeSystem : MonoBehaviour
     {
         MergeManager.OnMergeProcessed -= HandleMerge;
         GameManager.OnStateChanged -= HandleStateChanged;
-        DisableAccelerometer();
     }
 
     private void Start()
@@ -116,27 +115,11 @@ public class ShakeSystem : MonoBehaviour
         {
             shakeRoofCollider.enabled = true;
         }
-
-        EnableAccelerometer();
     }
 
     private bool CheckInputTriggers()
     {
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            return true;
-        }
-
-        if (Accelerometer.current != null)
-        {
-            Vector3 acceleration = Accelerometer.current.acceleration.ReadValue();
-            if (acceleration.sqrMagnitude >= settings.accelerometerThreshold)
-            {
-                return true;
-            }
-        }
-
-        return false;
+        return Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame;
     }
 
     private void ApplyOptimizedForce()
@@ -168,7 +151,6 @@ public class ShakeSystem : MonoBehaviour
         _currentEnergy = 0f;
         _isShakeReady = false;
 
-        DisableAccelerometer();
         OnEnergyUpdated?.Invoke(0f);
         OnShakeWindowEnded?.Invoke();
 
@@ -186,29 +168,11 @@ public class ShakeSystem : MonoBehaviour
         _isShakeWindowOpen = false;
         _isRoofPersisting = false;
 
-        DisableAccelerometer();
-
         if (shakeRoofCollider != null)
         {
             shakeRoofCollider.enabled = false;
         }
 
         OnEnergyUpdated?.Invoke(0f);
-    }
-
-    private void EnableAccelerometer()
-    {
-        if (Accelerometer.current != null && !Accelerometer.current.enabled)
-        {
-            InputSystem.EnableDevice(Accelerometer.current);
-        }
-    }
-
-    private void DisableAccelerometer()
-    {
-        if (Accelerometer.current != null && Accelerometer.current.enabled)
-        {
-            InputSystem.DisableDevice(Accelerometer.current);
-        }
     }
 }

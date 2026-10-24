@@ -4742,7 +4742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Agite o telefone!
+  m_text: "Aperte Espa\xE7o para agitar!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7f275f8f8f873684a8714aed3adb9da0, type: 2}
   m_sharedMaterial: {fileID: 2393526008796000218, guid: 7f275f8f8f873684a8714aed3adb9da0, type: 2}

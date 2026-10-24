@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using DG.Tweening; // Importação obrigatória para o Juice
+using DG.Tweening;
 
 public class CountdownController : MonoBehaviour
 {
@@ -51,8 +51,8 @@ public class CountdownController : MonoBehaviour
         {
             countdownText.text = Mathf.CeilToInt(timeRemaining).ToString();
 
-            countdownText.transform.DOKill(); 
-            countdownText.transform.localScale = _originalScale * 0.2f; 
+            countdownText.transform.DOKill();
+            countdownText.transform.localScale = _originalScale * 0.2f;
 
             countdownText.transform.DOScale(_originalScale, 0.5f).SetEase(Ease.OutBack);
 

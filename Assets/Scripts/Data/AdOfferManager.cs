@@ -107,8 +107,6 @@ public class AdOfferManager : MonoBehaviour
         _nextAllowedOfferTime = Time.time + cooldownBetweenOffers;
 
         GameManager.Instance.ChangeState(GameState.PowerUpSelection);
-
-        Debug.Log("Iniciando SDK de anuncio aqui no futuro...");
     }
 
     public void OnPlayerIgnoredAd()

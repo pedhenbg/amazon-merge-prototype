@@ -16,7 +16,6 @@ public class AnimalSpawner : MonoBehaviour
     [SerializeField] private Transform wallRight;
     [SerializeField] private float sideMargin = 0.2f;
 
-    [Header("Aim Indicator")]
     [SerializeField] private LineRenderer aimLine;
     [SerializeField] private float floorYPosition = -4.5f;
 
@@ -80,9 +79,9 @@ public class AnimalSpawner : MonoBehaviour
         }
 
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
-        if (Pointer.current == null) return;
+        if (Mouse.current == null) return;
 
-        Vector2 screenPos = Pointer.current.position.ReadValue();
+        Vector2 screenPos = Mouse.current.position.ReadValue();
         Vector3 worldPos = _mainCam.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, _mainCam.nearClipPlane));
         float clampedX = Mathf.Clamp(worldPos.x, _minX, _maxX);
 
@@ -96,7 +95,7 @@ public class AnimalSpawner : MonoBehaviour
             aimLine.SetPosition(1, new Vector3(clampedX, floorYPosition, 0));
         }
 
-        if (Pointer.current.press.wasReleasedThisFrame)
+        if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
             _isReady = false;
             if (aimLine != null) aimLine.enabled = false;

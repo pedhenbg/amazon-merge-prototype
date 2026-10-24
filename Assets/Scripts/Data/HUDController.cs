@@ -12,8 +12,7 @@ public class HUDController : MonoBehaviour
 
     private void OnEnable()
     {
-        // Inscrição nos eventos
-        ScoreManager.OnScoreUpdatedStatic += UpdateScore; // Usando evento estático para evitar erro de referência
+        ScoreManager.OnScoreUpdatedStatic += UpdateScore;
         AnimalSpawner.OnNextAnimalUpdated += UpdateNextAnimal;
         ShakeSystem.OnEnergyUpdated += UpdateShakeBar;
         ShakeSystem.OnShakeAvailable += EnableShakeButton;
@@ -37,9 +36,9 @@ public class HUDController : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.transform.parent.gameObject.SetActive(true); scoreText.enabled = true;
+            scoreText.transform.parent.gameObject.SetActive(true);
+            scoreText.enabled = true;
             scoreText.text = newScore.ToString();
-            Debug.Log($"HUD: Score atualizado para {newScore}");
         }
     }
 
