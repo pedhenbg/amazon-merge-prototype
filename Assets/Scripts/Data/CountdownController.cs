@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using DG.Tweening; // Importação obrigatória para o Juice
+using DG.Tweening; 
 
 public class CountdownController : MonoBehaviour
 {

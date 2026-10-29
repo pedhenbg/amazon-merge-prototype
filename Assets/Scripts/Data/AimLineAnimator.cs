@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class AimLineAnimator : MonoBehaviour
 {
-    [Tooltip("Velocidade da animação. Valores negativos fazem descer, positivos fazem subir.")]
+    
     [SerializeField] private float scrollSpeed = -2f;
 
     private LineRenderer _lineRenderer;

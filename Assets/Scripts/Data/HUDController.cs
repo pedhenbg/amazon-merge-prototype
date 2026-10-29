@@ -12,8 +12,8 @@ public class HUDController : MonoBehaviour
 
     private void OnEnable()
     {
-        // Inscrição nos eventos
-        ScoreManager.OnScoreUpdatedStatic += UpdateScore; // Usando evento estático para evitar erro de referência
+        
+        ScoreManager.OnScoreUpdatedStatic += UpdateScore; 
         AnimalSpawner.OnNextAnimalUpdated += UpdateNextAnimal;
         ShakeSystem.OnEnergyUpdated += UpdateShakeBar;
         ShakeSystem.OnShakeAvailable += EnableShakeButton;
